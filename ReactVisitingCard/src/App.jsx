@@ -4,20 +4,20 @@ import './App.css'
 import Todo from "./component/Todo"
 import Counter from './component/counter'
 import Forms from './component/forms'
-
+import List from './component/List';
 class App extends Component{
 
-  state = {
-    myString : "Heloo",
-    string1 : "Dename"
-  }
+  // state = {
+  //   myString : "Heloo",
+  //   string1 : "Dename"
+  // }
 
 
-  handleChange = ()=>{
-    this.setState({
-      myString: "Ajay"
-    })
-  }
+  // handleChange = ()=>{
+  //   this.setState({
+  //     myString: "Ajay"
+  //   })
+  // }
   render(){
     return (
       // <div className="App">
@@ -26,8 +26,13 @@ class App extends Component{
       //  <button onClick={this.handleChange}>Change</button>
       //  <Todo sendingData ={this.state.myString} />
       //  <Counter />
-       <Forms />
+      //  <Forms />
       // </div>
+      <div className="App">
+        <h1>List</h1>
+
+        <List/>
+      </div>
      );
   }
 }

@@ -4,25 +4,34 @@ import React,{Component} from "react";
 
 class Forms extends Component{
 
-    state= {
-        inputValue:  ""
-    }
-    onHandleChange = event =>{
+    constructor(probs){
+        super(probs);
+        this.state= {
+            firstName:  "",
+            secondName:  ""
+        };
 
-      this.setState({
-        inputvalue: event.target.value
-      });
+        this.inputOne = React.createRef();
+        this.inputTwo = React.createRef();
     }
+    
+
+   
 
     onSubmit = ()=>{
+        console.log(this.inputOne.value)
 
+        console.log(this.inputTwo.value)
     }
 
     render() {
         return(
             <form action="">
                 <h1>Form On Chang e event</h1>
-                <input type="text" value = {this.state.inputValue} onChange={this.onHandleChange} />
+                <input type="text" name="firstName" ref={input => this.inputOne = input}   />
+
+                <input type="text" name="secondName" ref={input => this.inputTwo = input}  />
+
 
                 <button type="button" onClick={this.onSubmit}>Sumbit</button>
             </form>
